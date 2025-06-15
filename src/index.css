@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+
+    --primary: 25 95% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 25% 95%;
+    --secondary-foreground: 220 15% 12%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 25 95% 55%;
+
+    --radius: 0.75rem;
+
+    --tech-blue: 225 85% 35%;
+    --tech-navy: 225 95% 15%;
+    --tech-gray: 220 15% 25%;
+    --kovelor-orange: 25 95% 55%;
+  }
+
+  .dark {
+    --background: 225 95% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 225 85% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 225 85% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 25 95% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 50% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 225 50% 20%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 225 50% 20%;
+    --input: 225 50% 20%;
+    --ring: 25 95% 55%;
+
+    --tech-blue: 225 85% 45%;
+    --tech-navy: 225 95% 25%;
+    --tech-gray: 220 15% 75%;
+    --kovelor-orange: 25 95% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-foreground;
+  }
+
+  .kovelor-nav-link {
+    @apply text-base xl:text-[1.0625rem] font-medium text-muted-foreground hover:text-kovelor-orange transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(var(--kovelor-orange)) 0%, hsl(var(--tech-blue)) 100%);
+  }
+
+  .tech-gradient {
+    background: linear-gradient(135deg, hsl(var(--tech-navy)) 0%, hsl(var(--tech-blue)) 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--kovelor-orange)) 0%, hsl(var(--tech-blue)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
